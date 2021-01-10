@@ -10,14 +10,14 @@ import org.bukkit.entity.Player;
 
 public class VehiclesAPICommand implements CommandExecutor {
 
-    public static boolean isInt(String s) {
+    /*public static boolean isInt(String s) {
         try {
             Integer.parseInt(s);
         } catch (NumberFormatException nfe) {
             return false;
         }
         return true;
-    }
+    }*/
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
@@ -25,7 +25,6 @@ public class VehiclesAPICommand implements CommandExecutor {
         //mainCommand
         if (command.getName().equalsIgnoreCase("vehicles")) {
             String vehicleType[] = {ChatColor.GOLD + "bike", ChatColor.GOLD + "broom", ChatColor.GOLD + "car", ChatColor.GOLD + "drill", ChatColor.GOLD + "helicopter", ChatColor.GOLD + "hoverbike", ChatColor.GOLD + "parachute", ChatColor.GOLD + "plane", ChatColor.GOLD + "racingcar", ChatColor.GOLD + "raft", ChatColor.GOLD + "sportbike", ChatColor.GOLD + "submarine", ChatColor.GOLD + "tank", ChatColor.GOLD + "tractor", ChatColor.GOLD + "train"};
-            //String vehicleType[] = {ChatColor.translateAlternateColorCodes('&',VehiclesAPI.plugin.getConfig().getString("vehicleType.bike")) , ChatColor.translateAlternateColorCodes('&',VehiclesAPI.plugin.getConfig().getString("vehicleType.broom")), ChatColor.translateAlternateColorCodes('&',VehiclesAPI.plugin.getConfig().getString("type.vehicle.car")), ChatColor.translateAlternateColorCodes('&',VehiclesAPI.plugin.getConfig().getString("type.vehicle.drill")), ChatColor.translateAlternateColorCodes('&',VehiclesAPI.plugin.getConfig().getString("type.vehicle.helicopter")), ChatColor.translateAlternateColorCodes('&',VehiclesAPI.plugin.getConfig().getString("type.vehicle.hoverbike")), ChatColor.translateAlternateColorCodes('&',VehiclesAPI.plugin.getConfig().getString("type.vehicle.parachute")), ChatColor.translateAlternateColorCodes('&',VehiclesAPI.plugin.getConfig().getString("type.vehicle.plane")), ChatColor.translateAlternateColorCodes('&',VehiclesAPI.plugin.getConfig().getString("type.vehicle.racingcar")), ChatColor.translateAlternateColorCodes('&',VehiclesAPI.plugin.getConfig().getString("type.vehicle.raft")), ChatColor.translateAlternateColorCodes('&',VehiclesAPI.plugin.getConfig().getString("type.vehicle.sportbike")), ChatColor.translateAlternateColorCodes('&',VehiclesAPI.plugin.getConfig().getString("type.vehicle.submarine")), ChatColor.translateAlternateColorCodes('&',VehiclesAPI.plugin.getConfig().getString("type.vehicle.tank")), ChatColor.translateAlternateColorCodes('&',VehiclesAPI.plugin.getConfig().getString("type.vehicle.tractor")), ChatColor.translateAlternateColorCodes('&',VehiclesAPI.plugin.getConfig().getString("type.vehicle.train"))};
             String separation = ChatColor.translateAlternateColorCodes('&', VehiclesAPI.plugin.getConfig().getString("separation"));
             if (!(sender instanceof Player)) {
                 sender.sendMessage(prefix + ChatColor.translateAlternateColorCodes('&', VehiclesAPI.plugin.getConfig().getString("message.fromConsole")));
