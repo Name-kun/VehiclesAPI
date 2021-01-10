@@ -1,0 +1,11 @@
+name: VehiclesAPI
+version: ${project.version}
+main: xyz.namekun.vehiclesapi.VehiclesAPI
+api-version: 1.16
+authors: [ NameKuso ]
+description: The Improvement for Vehicles Plugin concerning its commands.
+
+commands:
+  vehicles:
+    usage: /vehicles help
+    description: The Improvement for Vehicles Plugin concerning its commands.
