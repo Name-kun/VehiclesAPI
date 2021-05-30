@@ -17,9 +17,8 @@ public class VehiclesAPITabCompleter implements TabCompleter {
             tabCommand.add("get");
             tabCommand.add("shop");
             tabCommand.add("repair");
-            //tabCommand.add("clear");
+            tabCommand.add("clear");
             tabCommand.add("reload");
-            return tabCommand;
         } else if (args.length == 2) {
             if (args[0].equalsIgnoreCase("list")) {
                 tabCommand.add("bike");
@@ -37,7 +36,6 @@ public class VehiclesAPITabCompleter implements TabCompleter {
                 tabCommand.add("tank");
                 tabCommand.add("tractor");
                 tabCommand.add("train");
-                return tabCommand;
             } else if (args[0].equalsIgnoreCase("get")) {
                 tabCommand.add("bike");
                 tabCommand.add("broom");
@@ -54,7 +52,6 @@ public class VehiclesAPITabCompleter implements TabCompleter {
                 tabCommand.add("tank");
                 tabCommand.add("tractor");
                 tabCommand.add("train");
-                return tabCommand;
             } else if (args[0].equalsIgnoreCase("shop")) {
                 tabCommand.add("bike");
                 tabCommand.add("broom");
@@ -71,12 +68,11 @@ public class VehiclesAPITabCompleter implements TabCompleter {
                 tabCommand.add("tank");
                 tabCommand.add("tractor");
                 tabCommand.add("train");
-            } /*else if (args[0].equalsIgnoreCase("clear")) {
+            } else if (args[0].equalsIgnoreCase("clear")) {
                 if (args.length == 3) {
                     tabCommand.add("true");
                 }
-            }*/
-            return tabCommand;
+            }
         }
         if (args.length == 3) {
             if (args[0].equalsIgnoreCase("get")) {

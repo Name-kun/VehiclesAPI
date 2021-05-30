@@ -9,3 +9,4 @@ commands:
   vehicles:
     usage: /vehicles help
     description: The Improvement for Vehicles Plugin concerning its commands.
+    aliases: [ve]

@@ -17,6 +17,7 @@ public final class VehiclesAPI extends JavaPlugin {
         // Plugin startup logic
         getCommand("vehicles").setExecutor(new VehiclesAPICommand());
         getCommand("vehicles").setTabCompleter(new VehiclesAPITabCompleter());
+        getServer().getPluginManager().registerEvents(new VehiclesAPIListner(), this);
         plugin = this;
         createFiles();
     }
